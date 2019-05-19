@@ -4,7 +4,7 @@
 
 ```Shell Session
 # install dependencies
-yarn 
+yarn
 
 # development server
 yarn start
@@ -19,13 +19,18 @@ With VSCode, put this config in `.vscode/settings.json`
 
 ```json
 {
-    "eslint.validate":[
-      {
-        "language":"javascript",
-        "autoFix":true
-      }
-    ],
-    "eslint.autoFixOnSave":true,
-    "editor.formatOnSave":false
-  }
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "scss",
+      "autoFix": true
+    }
+  ],
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true
+}
 ```
