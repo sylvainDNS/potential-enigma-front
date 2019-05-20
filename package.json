@@ -35,6 +35,8 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap": "^4.3.1",
+    "common-env": "^6.3.0",
+    "dotenv": "^8.0.0"
   }
 }
