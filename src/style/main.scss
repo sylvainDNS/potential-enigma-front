@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background: no-repeat center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(16, 22, 32, 0.3),
+      rgba(16, 22, 32, 0.3)
+    ),
+    url('../images/background.jpg');
+  height: 100vh;
+
+  .terminated {
+    background-color: #f3f3f3;
+  }
+}
