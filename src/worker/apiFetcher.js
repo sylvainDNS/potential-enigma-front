@@ -27,3 +27,15 @@ export const deleteGame = game_id =>
   fetch(url + '/' + game_id, { method: 'DELETE' })
     .then(resp => resp.json())
     .catch(err => console.error(err))
+
+export const completeGame = game_id => {
+  fetch(url + '/' + game_id, {
+    method: 'PUT',
+    headers: new Headers({
+      'Content-Type': 'application/json',
+    }),
+    body: JSON.stringify({ isCompleted: true }),
+  })
+    .then(resp => resp.json())
+    .catch(err => console.error(err))
+}
