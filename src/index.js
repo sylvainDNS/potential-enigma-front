@@ -1,3 +1,5 @@
-import { config } from './utils/config'
+import { Form } from '@Component/Form'
 
-import './main.scss'
+import '@Style/main.scss'
+
+Form()
