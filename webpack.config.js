@@ -1,6 +1,15 @@
+const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  resolve: {
+    alias: {
+      '@Worker': path.resolve(__dirname, 'src/worker/'),
+      '@Utils': path.resolve(__dirname, 'src/utils/'),
+      '@Style': path.resolve(__dirname, 'src/style/'),
+      '@Component': path.resolve(__dirname, 'src/component/'),
+    },
+  },
   module: {
     rules: [
       {
