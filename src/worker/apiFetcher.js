@@ -22,4 +22,8 @@ export const getGame = game_id =>
   fetch(url + '/' + game_id)
     .then(resp => resp.json())
     .then(games => games[0])
+
+export const deleteGame = game_id =>
+  fetch(url + '/' + game_id, { method: 'DELETE' })
+    .then(resp => resp.json())
     .catch(err => console.error(err))
