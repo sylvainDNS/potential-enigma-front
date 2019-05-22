@@ -1,0 +1,14 @@
+import { config } from '@Utils/config'
+
+const url = `http://${config.api.host}:${config.api.port}/game`
+
+export const addGame = name =>
+  fetch(url, {
+    method: 'POST',
+    headers: new Headers({
+      'Content-Type': 'application/json',
+    }),
+    body: JSON.stringify({ name: name }),
+  })
+    .then(resp => resp.json())
+    .catch(err => console.error(err))
