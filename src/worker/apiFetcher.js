@@ -1,6 +1,6 @@
 import { config } from '@Utils/config'
 
-const url = `http://${config.api.host}:${config.api.port}/game`
+const url = `http://${config.api.host}:${config.api.port}/games`
 
 export const addGame = name =>
   fetch(url, {
@@ -10,5 +10,10 @@ export const addGame = name =>
     }),
     body: JSON.stringify({ name: name }),
   })
+    .then(resp => resp.json())
+    .catch(err => console.error(err))
+
+export const getGames = () =>
+  fetch(url)
     .then(resp => resp.json())
     .catch(err => console.error(err))
