@@ -4,8 +4,6 @@ import { Card } from '@Component/Card'
 import { Field } from '@Component/Field'
 import { AddButton } from '@Component/Button'
 
-const root = document.getElementById('root')
-
 export const Form = () => {
   const card = Card('Ajouter une partie')
   const form = createNode('form')
@@ -14,7 +12,5 @@ export const Form = () => {
 
   append(form, [field, submitButton])
 
-  append(card, [form])
-
-  append(root, [card])
+  return append(card, [form])
 }

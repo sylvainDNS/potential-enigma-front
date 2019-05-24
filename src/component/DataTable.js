@@ -5,8 +5,6 @@ import { Card } from '@Component/Card'
 import { Table } from '@Component/Table'
 import { TableRow } from '@Component/TableRow'
 
-const root = document.getElementById('root')
-
 export const DataTable = games => {
   const card = Card('Les parties')
   const table = Table()
@@ -21,6 +19,5 @@ export const DataTable = games => {
     err => console.error(err)
   )
 
-  append(card, [table])
-  append(root, [card])
+  return append(card, [table])
 }
