@@ -8,4 +8,8 @@ export const config = env().getOrElseAll({
     host: 'localhost',
     port: 4444,
   },
+  socket: {
+    host: 'localhost',
+    port: 4444,
+  },
 })
