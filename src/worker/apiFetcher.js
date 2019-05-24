@@ -17,3 +17,9 @@ export const getGames = () =>
   fetch(url)
     .then(resp => resp.json())
     .catch(err => console.error(err))
+
+export const getGame = game_id =>
+  fetch(url + '/' + game_id)
+    .then(resp => resp.json())
+    .then(games => games[0])
+    .catch(err => console.error(err))
