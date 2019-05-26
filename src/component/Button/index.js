@@ -3,6 +3,7 @@ import { createNode } from '@Utils/builder'
 export { AddButton } from './AddButton'
 export { CompleteButton } from './CompleteButton'
 export { DeleteButton } from './DeleteButton'
+export { SubmitButton } from './SubmitButton'
 
 export const Button = (onClick, className, label, game_id) => {
   const button = createNode('button')
