@@ -1,5 +1,6 @@
 import { Form } from '@Component/Form'
-import { DataTable } from '../component/DataTable'
+import { DataTable } from '@Component/DataTable'
+import { Bubble } from '@Component/Bubble'
 import { getGames } from '@Worker/apiFetcher'
 
 export const setupDom = () => {
@@ -23,4 +24,11 @@ export const createNode = element => document.createElement(element)
 export const removeNodeById = elementId => {
   const element = document.getElementById(elementId)
   return element.parentNode.removeChild(element)
+}
+
+export const addBubble = (message, owner) => {
+  const conversation = document.getElementById('conversation')
+  const bubble = Bubble(message, owner)
+
+  return append(conversation, [bubble])
 }
