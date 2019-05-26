@@ -1,5 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 
+$receiver: #ff1493;
+$sender: #9acd32;
+
 body {
   background: no-repeat center;
   background-size: cover;
@@ -9,8 +12,66 @@ body {
     ),
     url('../images/background.jpg');
   height: 100vh;
+}
+
+.card {
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+
+  .table {
+    margin: 0;
+  }
+
+  .btn {
+    margin: 0.25rem;
+  }
 
   .completed {
     background-color: #f3f3f3;
+  }
+
+  #conversation {
+    margin-bottom: 0.5rem;
+    min-height: 3rem;
+  }
+}
+
+.bubble {
+  margin: 1rem;
+  border-radius: 15px;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  font-family: arial;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-bottom: 15px solid transparent;
+    top: 0px;
+  }
+
+  &.sender {
+    background: $sender;
+    &:before {
+      border-left: 15px solid $sender;
+      border-right: 15px solid transparent;
+      border-top: 15px solid $sender;
+      right: -16px;
+    }
+  }
+
+  &.receiver {
+    background: $receiver;
+    &:before {
+      border-left: 15px solid transparent;
+      border-right: 15px solid $receiver;
+      border-top: 15px solid $receiver;
+      left: -16px;
+    }
   }
 }
