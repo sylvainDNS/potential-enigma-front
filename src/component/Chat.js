@@ -1,0 +1,21 @@
+import { createNode, append } from '@Utils/builder'
+
+import { Card } from '@Component/Card'
+import { Field } from '@Component/Field'
+import { SubmitButton } from '@Component/Button'
+
+export const Chat = () => {
+  const card = Card('Chat')
+  const form = createNode('form')
+
+  const div = createNode('div')
+  div.id = 'conversation'
+
+  const fieldId = 'chat-message'
+  const field = Field(fieldId)
+  const submitButton = SubmitButton('Envoyer', fieldId)
+
+  append(form, [field, submitButton])
+
+  return append(card, [div, form])
+}

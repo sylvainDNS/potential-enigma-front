@@ -1,5 +1,6 @@
 import { Form } from '@Component/Form'
 import { DataTable } from '@Component/DataTable'
+import { Chat } from '@Component/Chat'
 import { Bubble } from '@Component/Bubble'
 import { getGames } from '@Worker/apiFetcher'
 
@@ -10,8 +11,9 @@ export const setupDom = () => {
 
   const form = Form()
   const dataTable = DataTable(games)
+  const chat = Chat()
 
-  append(root, [form, dataTable])
+  append(root, [form, dataTable, chat])
 }
 
 export const append = (parent, children) => {
