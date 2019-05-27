@@ -10,6 +10,8 @@ export const addEvent = socket =>
       game => {
         const tr = TableRow(game)
         const table = document.getElementById('game-table')
+        document.getElementById('counter').innerText++
+
         append(table, [tr])
       },
       err => console.error(err)
